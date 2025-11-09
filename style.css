@@ -2494,203 +2494,40 @@ textarea:focus-visible {
   border: 1px solid #555;
   color: #fff;
 }
-/* ============================= */
-/* 📱 FULL MOBILE RESPONSIVE FIX */
-/* ============================= */
-
+/* === MOBILE NAVIGATION FIX === */
 @media (max-width: 768px) {
-
-  /* ====== GENERAL ====== */
-  body {
-    font-size: 15px;
-    line-height: 1.5;
-    overflow-x: hidden;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* ====== HEADER & NAVBAR ====== */
   .header-flex {
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
   }
 
-  .burger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 28px;
-    height: 20px;
-    cursor: pointer;
-  }
-
-  .burger span {
-    height: 3px;
-    background: #fff;
-    border-radius: 2px;
-    width: 100%;
-  }
-
-  nav {
+  /* Hide the full menu initially */
+  .nav {
     display: none;
     flex-direction: column;
     width: 100%;
-    background: var(--bg-color, #111);
+    background: var(--header-bg);
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 100;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
   }
 
-  nav.active {
+  /* Show menu when active */
+  .nav.active {
     display: flex;
   }
 
   .nav li {
     width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .nav a {
+    color: var(--text-color);
     display: block;
     padding: 1rem;
-    color: #fff;
-  }
-
-  .header-flex img {
-    width: 55px;
-    height: 55px;
-  }
-
-  /* ====== ABOUT SECTION ====== */
-  .about-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .about-text {
-    text-align: center;
-    padding: 0 1rem;
-  }
-
-  .about-video video {
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius-md);
-  }
-
-  /* ====== CAROUSELS ====== */
-  .carousel-container,
-  .carousel-container2 {
-    position: relative;
-    overflow: hidden;
-    padding: 1rem 0;
-  }
-
-  .carousel-card,
-  .carousel-card2 {
-    min-width: 80%;
-    margin: 0 auto;
-  }
-
-  .carousel-arrow {
-    display: none; /* hide arrows on small screens */
-  }
-
-  /* ====== FOOTER ====== */
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
-  }
-
-  .footer-logo img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .footer-contacts-content {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .footer-bottom {
-    font-size: 0.85rem;
-    padding: 1rem 0;
-  }
-
-  /* ====== PROFILE PAGE ====== */
-  .profile-container {
-    padding: 1rem;
-  }
-
-  .profile-info,
-  .profile-actions,
-  .profile-preferences,
-  .profile-stats {
-    padding: 1rem;
-  }
-
-  .action-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .stat-card {
-    flex: 1 1 45%;
-    margin: 0.5rem 0;
-  }
-
-  /* ====== CONTACT PAGE ====== */
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-info,
-  .contact-form-container {
-    width: 100%;
-  }
-
-  /* ====== AUTH PAGES ====== */
-  .auth-container {
-    width: 100%;
-    padding: 1rem;
-  }
-
-  .auth-tabs {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .auth-form {
-    width: 100%;
-  }
-}
-
-
-
 
 
